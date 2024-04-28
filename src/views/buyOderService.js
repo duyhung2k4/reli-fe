@@ -32,7 +32,7 @@ class BuyOrderService {
             );
             return res;
         } catch (error) {
-
+            console.log(error)
         }
     }
     async updateStatus(id) {
