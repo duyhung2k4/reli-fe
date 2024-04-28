@@ -15,14 +15,9 @@ class ProductService {
     }
   }
   async getProductToDemo(startRecord, count) {
-    console.log({
-        startRecord, 
-        count,
-    })
     try {
       const response = await axios.get(
-        //`http://3.107.38.242:5000/api/SellProduct/${startRecord}/${count}`
-        `http://3.107.38.242:5000/api/SellProduct`
+        `http://3.107.38.242:5000/api/SellProduct/${startRecord}/${count}`
       );
       return response.data;
     } catch (error) {
