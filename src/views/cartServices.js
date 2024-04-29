@@ -5,7 +5,7 @@ class CartService {
         
         return await axios({
             method: "post",
-            url: "http://3.107.38.242:5000/api/Cart/add",
+            url: "http://89.116.121.36:5000/api/Cart/add",
             headers: {
                 accepts: "*/*",
                 "Content-Type": "application/json",
@@ -19,7 +19,7 @@ class CartService {
   async getCartInfo(userId) {
     try {
         
-        const res = await axios.get(`http://3.107.38.242:5000/api/Cart/${userId}`);
+        const res = await axios.get(`http://89.116.121.36:5000/api/Cart/${userId}`);
         return res;
     } catch (error) {
         console.log(error)    
@@ -29,7 +29,7 @@ class CartService {
     try {
       return await axios({
         method: "delete",
-        url: `http://3.107.38.242:5000/api/Cart/${cartId}`,
+        url: `http://89.116.121.36:5000/api/Cart/${cartId}`,
         headers: { accepts: "*/*", "Content-Type": "application/json" },
       });
     } catch (error) {

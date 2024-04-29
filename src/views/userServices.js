@@ -5,7 +5,7 @@ class UserService {
 
             return await axios({
                 method: "post",
-                url: "http://3.107.38.242:5000/api/Users",
+                url: "http://89.116.121.36:5000/api/Users",
                 headers: {
                     accepts: "*/*",
                     "Content-Type": "application/json",
@@ -21,7 +21,7 @@ class UserService {
 
             return await axios({
                 method: "get",
-                url: "http://3.107.38.242:5000/api/Users",
+                url: "http://89.116.121.36:5000/api/Users",
             });
         } catch (error) {
             console.log(error)
@@ -30,7 +30,7 @@ class UserService {
     async getUserById(userId) {
         try {
 
-            const res = await axios.get(`http://3.107.38.242:5000/api/Users/${userId}`);
+            const res = await axios.get(`http://89.116.121.36:5000/api/Users/${userId}`);
             return res;
         } catch (error) {
             console.log(error)
@@ -40,7 +40,7 @@ class UserService {
         try {
             const res = await axios({
                 method: "put", // Hoặc "patch" nếu chỉ cập nhật một phần của thông tin người dùng
-                url: `http://3.107.38.242:5000/api/Users/${userId}`,
+                url: `http://89.116.121.36:5000/api/Users/${userId}`,
                 headers: {
                     Accept: "*/*",
                     "Content-Type": "application/json",
@@ -59,7 +59,7 @@ class UserService {
 
             return await axios({
                 method: "get",
-                url: ` http://3.107.38.242:5000/api/Users/${userId}/avatar`,
+                url: ` http://89.116.121.36:5000/api/Users/${userId}/avatar`,
             });
         } catch (error) {
             console.log(error)

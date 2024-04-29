@@ -17,7 +17,7 @@ class ProductService {
     async getProductToDemo(startRecord, count) {
         try {
             const response = await axios.get(
-                `http://3.107.38.242:5000/api/SellProduct/${startRecord}/${count}`
+                `http://89.116.121.36:5000/api/SellProduct/${startRecord}/${count}`
             );
             return response.data;
         } catch (error) {
@@ -30,7 +30,7 @@ class ProductService {
 
             return await axios({
                 method: "post",
-                url: "http://3.107.38.242:5000/api/SellProduct",
+                url: "http://89.116.121.36:5000/api/SellProduct",
                 headers: {
                     accepts: "*/*",
                     "Content-Type": "application/json",
@@ -45,7 +45,7 @@ class ProductService {
     async getProductById(productId) {
         try {
             const response = await axios.get(
-                `http://3.107.38.242:5000/api/SellProduct/${productId}`
+                `http://89.116.121.36:5000/api/SellProduct/${productId}`
             );
             return response.data;
         } catch (error) {
@@ -57,7 +57,7 @@ class ProductService {
         try {
 
             const response = await axios.get(
-                `http://3.107.38.242:5000/api/SellProduct/images/${productId}`
+                `http://89.116.121.36:5000/api/SellProduct/images/${productId}`
             );
             return response;
         } catch (error) {
@@ -69,7 +69,7 @@ class ProductService {
 
             return await axios({
                 method: "post",
-                url: "http://3.107.38.242:5000/api/SellProduct/images",
+                url: "http://89.116.121.36:5000/api/SellProduct/images",
                 headers: {
                     accepts: "*/*",
                     "Content-Type": "application/json",

@@ -5,7 +5,7 @@ class CollectService {
 
             return await axios({
                 method: "post",
-                url: "http://3.107.38.242:5000/api/CollectProduct",
+                url: "http://89.116.121.36:5000/api/CollectProduct",
                 headers: {
                     accepts: "*/*",
                     "Content-Type": "application/json",
@@ -21,7 +21,7 @@ class CollectService {
 
             return await axios({
                 method: "post",
-                url: "http://3.107.38.242:5000/api/CollectProduct/images",
+                url: "http://89.116.121.36:5000/api/CollectProduct/images",
                 headers: {
                     accepts: "*/*",
                     "Content-Type": "application/json",
@@ -36,7 +36,7 @@ class CollectService {
         try {
             return await axios({
                 method: "get",
-                url: `http://3.107.38.242:5000/api/CollectProduct/collectProduct/${userId}`,
+                url: `http://89.116.121.36:5000/api/CollectProduct/collectProduct/${userId}`,
                 headers: { accepts: "*/*", "Content-Type": "application/json" },
             });
         } catch (error) {
@@ -47,7 +47,7 @@ class CollectService {
         try {
             return await axios({
                 method: "get",
-                url: `http://3.107.38.242:5000/api/CollectProduct/images/${productId}`,
+                url: `http://89.116.121.36:5000/api/CollectProduct/images/${productId}`,
                 headers: { accepts: "*/*", "Content-Type": "application/json" },
             });
         } catch (error) {
