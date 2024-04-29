@@ -90,9 +90,9 @@
           </div>
           <div class="profile-dob flex-row">
             <label>Ngày sinh</label>
-            <Combobox isV3="true" width="120" :items="date"></Combobox>
-            <Combobox isV3="true" width="120"></Combobox>
-            <Combobox isV3="true" width="120"></Combobox>
+            <Textfield isV3="true" width="120" :items="date"></Textfield>
+            <Textfield isV3="true" width="120"></Textfield>
+            <Textfield isV3="true" width="120"></Textfield>
           </div>
           <div class="profile-save-btn">
             <button class="pri-btn nor-btn" @click="updateProfile(this.userId)">
@@ -149,14 +149,12 @@
 <script>
 import Navbar from "@/components/Navbar/index.vue";
 import Textfield from "@/components/TextField/index.vue";
-import Combobox from "@/components/Combobox/index.vue";
 import Footer from "@/components/Footer/index.vue";
 import UserService from "@/views/userServices";
 export default {
   components: {
     Navbar,
     Textfield,
-    Combobox,
     Footer,
   },
   name: "ProfilePage",

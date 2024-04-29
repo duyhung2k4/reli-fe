@@ -104,6 +104,7 @@ const Register = {
       // console.log(UserService.getUser());
       await UserService.registerUser(raw).then(() => {
         console.log("Đăng ký thành công");
+        window.location.href = "/login";
       });
     },
   },
