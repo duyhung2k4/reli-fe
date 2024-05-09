@@ -1,35 +1,25 @@
 import axios from "axios";
 class CartService {
   async addToCart(data) {
-    try {
-        
-        return await axios({
-            method: "post",
-            url: "http://89.116.121.36:5000/api/Cart/add",
-            headers: {
-                accepts: "*/*",
-                "Content-Type": "application/json",
-            },
-            data: data,
-        });
-    } catch (error) {
-        console.log(error)    
-    }
+    return await axios({
+      method: "post",
+      url: "http://localhost:5000/api/Cart/add",
+      headers: {
+        accepts: "*/*",
+        "Content-Type": "application/json",
+      },
+      data: data,
+    });
   }
   async getCartInfo(userId) {
-    try {
-        
-        const res = await axios.get(`http://89.116.121.36:5000/api/Cart/${userId}`);
-        return res;
-    } catch (error) {
-        console.log(error)    
-    }
+    const res = await axios.get(`http://localhost:5000/api/Cart/${userId}`);
+    return res;
   }
   async deleteCartItem(cartId) {
     try {
       return await axios({
         method: "delete",
-        url: `http://89.116.121.36:5000/api/Cart/${cartId}`,
+        url: `http://localhost:5000/api/Cart/${cartId}`,
         headers: { accepts: "*/*", "Content-Type": "application/json" },
       });
     } catch (error) {

@@ -90,9 +90,9 @@
           </div>
           <div class="profile-dob flex-row">
             <label>Ngày sinh</label>
-            <Textfield isV3="true" width="120" :items="date"></Textfield>
-            <Textfield isV3="true" width="120"></Textfield>
-            <Textfield isV3="true" width="120"></Textfield>
+            <Combobox isV3="true" width="120" :items="date"></Combobox>
+            <Combobox isV3="true" width="120"></Combobox>
+            <Combobox isV3="true" width="120"></Combobox>
           </div>
           <div class="profile-save-btn">
             <button class="pri-btn nor-btn" @click="updateProfile(this.userId)">
@@ -149,18 +149,20 @@
 <script>
 import Navbar from "@/components/Navbar/index.vue";
 import Textfield from "@/components/TextField/index.vue";
+import Combobox from "@/components/Combobox/index.vue";
 import Footer from "@/components/Footer/index.vue";
 import UserService from "@/views/userServices";
 export default {
   components: {
     Navbar,
     Textfield,
+    Combobox,
     Footer,
   },
   name: "ProfilePage",
   data() {
     return {
-      imageUrl: "../../../public/img/assets/ava-acc-icon.png",
+      imageUrl: "",
       date: [
         { id: 1, name: 1 },
         { id: 1, name: 2 },
@@ -241,6 +243,11 @@ export default {
         dob: "2024-04-24T23:36:35.207Z",
         gender: this.userInfo.gender,
       };
+      const updateAva = {
+        user_id: userId,
+        user_ava: this.imageUrl,
+      };
+      UserService.changeUserAva(updateAva);
       UserService.updateUser(userId, updatedUser)
         .then((response) => {
           console.log(response.data);
